@@ -204,12 +204,12 @@ This transparent approach builds trust and ensures students understand not just 
 
 ---
 
-###🎨 MVP Screenshots
+## 🎨 MVP Screenshots
 <img width="1920" height="2602" alt="SaarthiAI-Discover-Opportunities-You-Didn-t-Know-Existed (1)" src="https://github.com/user-attachments/assets/ba58eac2-a893-43b2-b1c3-64edc03dcf72" />
 
 ---
 
-#🚀 Future Enhancements
+## 🚀 Future Enhancements
 
    a.Real-time opportunity ingestion
    b.Automated government portal scraping
@@ -218,4 +218,4 @@ This transparent approach builds trust and ensures students understand not just 
    e.State-wise recommendation engine
    f.Multi-language support
 ---
-### Live Demo Link: https://saarthi-ai-t3y3.onrender.com
+## Live Demo Link: https://saarthi-ai-t3y3.onrender.com
