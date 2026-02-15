@@ -129,25 +129,7 @@ Personalized Insight Output
 ---
 
 # 🧩 Core Modules
-
 ## 1️⃣ Student Profile Generator
-
-Converts form inputs into structured profile:
-
-```json
-{
-  "name": "",
-  "age": "",
-  "education_level": "",
-  "degree": "",
-  "field": "",
-  "year": "",
-  "institution_type": "",
-  "background": [],
-  "goals": [],
-  "missed_before": "",
-  "additional_context": ""
-}
 
 ## 2️⃣ Blindspot Detection Engine (Core Innovation)
 
@@ -207,7 +189,6 @@ For each recommended opportunity, the system clearly explains:
 - Suggested next steps
 
 This transparent approach builds trust and ensures students understand not just *what* to apply for, but *why* it matters.
---------------
 --------------
 #🎨 MVP Screenshots
 <img width="1920" height="2602" alt="SaarthiAI-Discover-Opportunities-You-Didn-t-Know-Existed (1)" src="https://github.com/user-attachments/assets/ba58eac2-a893-43b2-b1c3-64edc03dcf72" />
