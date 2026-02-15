@@ -112,25 +112,38 @@ v
 ## 🔹 Process Flow
 
 Student Input
-↓
+      ↓
 Profile Structuring
-↓
+      ↓
 Blindspot Identification
-↓
+      ↓
 Eligibility Filtering
-↓
+      ↓
 Low-Awareness Prioritization
-↓
+      ↓
 Explainable Recommendation Generation
-↓
+      ↓
 Personalized Insight Output
-
-
 ---
 
 # 🧩 Core Modules
 ## 1️⃣ Student Profile Generator
+Converts form inputs into structured profile:
 
+{
+  "name": "",
+  "age": "",
+  "education_level": "",
+  "degree": "",
+  "field": "",
+  "year": "",
+  "institution_type": "",
+  "background": [],
+  "goals": [],
+  "missed_before": "",
+  "additional_context": ""
+}
+---
 ## 2️⃣ Blindspot Detection Engine (Core Innovation)
 
 The Blindspot Detection Engine is the central innovation of Saarthi AI.  
@@ -187,21 +200,21 @@ For each recommended opportunity, the system clearly explains:
 - Why students usually miss it
 - Miss Probability (High / Medium / Low)
 - Suggested next steps
+This transparent approach builds trust and ensures students understand not just what to apply for, but why it matters.
 
-This transparent approach builds trust and ensures students understand not just *what* to apply for, but *why* it matters.
---------------
-#🎨 MVP Screenshots
+---
+
+###🎨 MVP Screenshots
 <img width="1920" height="2602" alt="SaarthiAI-Discover-Opportunities-You-Didn-t-Know-Existed (1)" src="https://github.com/user-attachments/assets/ba58eac2-a893-43b2-b1c3-64edc03dcf72" />
 
------------
-
+---
 
 #🚀 Future Enhancements
 
-a.Real-time opportunity ingestion
-b.Automated government portal scraping
-c.Deadline tracking system
-d.Personalized reminders
-e.State-wise recommendation engine
-f.Multi-language support
---------
+   a.Real-time opportunity ingestion
+   b.Automated government portal scraping
+   c.Deadline tracking system
+   d.Personalized reminders
+   e.State-wise recommendation engine
+   f.Multi-language support
+---
