@@ -1,0 +1,304 @@
+{% extends "base.html" %}
+
+{% block title %}SaarthiAI - Your Opportunities{% endblock %}
+
+{% block content %}
+<div class="results-screen">
+    <div id="resultsContent">
+        <!-- Content will be dynamically loaded by JavaScript -->
+    </div>
+    
+    <div class="results-footer">
+        <p>Saarthi AI © 2024 • Empowering the next generation of builders.</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Load results from sessionStorage
+document.addEventListener('DOMContentLoaded', function() {
+    const resultsData = sessionStorage.getItem('saarthiResults');
+    
+    if (!resultsData) {
+        window.location.href = '/form';
+        return;
+    }
+    
+    const results = JSON.parse(resultsData);
+    displayResults(results);
+});
+
+function displayResults(results) {
+    const container = document.getElementById('resultsContent');
+    
+    let html = '';
+    
+    // Profile Summary Header
+    const profileData = parseProfileSummary(results.profile_summary);
+    html += `
+        <div class="results-header">
+            <button class="edit-profile-btn" onclick="window.location.href='/form'">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                </svg>
+                Edit Profile
+            </button>
+            <h1 class="results-greeting">Hi ${profileData.name}, here's what we understood about you</h1>
+            <div class="profile-summary-list">
+                ${generateProfileItems(profileData)}
+            </div>
+        </div>
+    `;
+    
+    // Blindspots Section
+    html += `
+        <div class="result-section">
+            <h2 class="section-title">
+                <svg class="section-icon" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
+                Awareness Blindspots Detected
+            </h2>
+            <div class="blindspots-grid">
+    `;
+    
+    const blindspotIcons = ['📊', '🎯', '🎓'];
+    const priorities = [
+        { text: 'PRIORITY: URGENT', class: 'urgent' },
+        { text: 'PRIORITY: HIGH', class: 'high' },
+        { text: 'PRIORITY: LOW', class: 'low' }
+    ];
+    results.blindspots.forEach((blindspot, index) => {
+        const priority = priorities[index] || { text: 'PRIORITY: MEDIUM', class: 'high' };
+        html += `
+            <div class="blindspot-card">
+                <div class="blindspot-header">
+                    <div class="blindspot-icon">${blindspotIcons[index] || '💡'}</div>
+                    <div class="blindspot-title-section">
+                        <div class="blindspot-priority ${priority.class}">${priority.text}</div>
+                        <h3>${blindspot.category}</h3>
+                    </div>
+                </div>
+                <p class="blindspot-reason">${blindspot.reason}</p>
+            </div>
+        `;
+    });
+    
+    html += `
+            </div>
+        </div>
+    `;
+    
+    // Recommendations Section
+    html += `
+        <div class="result-section">
+            <h2 class="section-title">
+                <svg class="section-icon" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                </svg>
+                Recommended Opportunities
+            </h2>
+    `;
+    
+    if (results.no_matches) {
+        html += `
+            <div class="no-matches">
+                <p>We couldn't find specific opportunities in our current database that match your eligibility criteria. This doesn't mean opportunities don't exist—our database is limited and continuously being updated.</p>
+                <p>We recommend:</p>
+                <ul>
+                    <li>Checking back later as we add more opportunities</li>
+                    <li>Using the blindspot categories we identified to guide your own research</li>
+                    <li>Exploring government scholarship portals and your institution's resources</li>
+                </ul>
+            </div>
+        `;
+    } else {
+        html += `<div class="opportunities-list">`;
+        
+        const logos = ['💼', '🎓', '🔬'];
+        results.matches.forEach((match, index) => {
+            html += `
+                <div class="opportunity-card">
+                    <div class="opportunity-header">
+                        <div class="opportunity-logo">${logos[index] || '📋'}</div>
+                        <div class="opportunity-title-section">
+                            <h3 class="opportunity-title">${match.name}</h3>
+                            <div class="opportunity-meta">
+                                <span>${match.category || 'General'}</span>
+                                <span>•</span>
+                                <span>Impact: ${match.impact_level || 'Medium'}</span>
+                                <span>•</span>
+                                <span class="miss-probability-badge ${getMissProbabilityClass(match.miss_probability)}">${getMissProbabilityText(match.miss_probability)}</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="opportunity-description">${match.description}</p>
+                    
+                    <div class="opportunity-details">
+                        <div class="detail-box">
+                            <div class="detail-label">
+                                <svg class="detail-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                MATCHING SCORE: ${match.matching_score || 0}/7
+                            </div>
+                            <p class="detail-text">This opportunity matches ${match.matching_score || 0} out of 7 key criteria from your profile.</p>
+                        </div>
+                        
+                        <div class="detail-box warning">
+                            <div class="detail-label">
+                                <svg class="detail-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                                WHY STUDENTS MISS IT
+                            </div>
+                            <p class="detail-text">${match.why_missed || 'Limited awareness and promotion'}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="opportunity-tags">
+                        <span class="tag">#${match.category.toUpperCase()}</span>
+                        <span class="tag">#${match.impact_level.toUpperCase()}-IMPACT</span>
+                        <span class="tag">#SCORE-${match.matching_score || 0}</span>
+                    </div>
+                    
+                    <div class="opportunity-action">
+                        <button class="view-details-btn">
+                            View Details
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            `;
+        });
+        
+        html += `</div>`;
+    }
+    
+    html += `</div>`;
+    
+    // Final Insight Banner
+    const insightText = extractInsightBody(results.final_insight);
+    html += `
+        <div class="final-insight-banner">
+            <div class="insight-badge">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                </svg>
+                YOUR KEY INSIGHT
+            </div>
+            <p>${insightText}</p>
+        </div>
+    `;
+    
+    // Actions
+    html += `
+        <div class="results-actions">
+            <a href="/form" class="btn btn-primary">Discover More Opportunities</a>
+        </div>
+    `;
+    
+    container.innerHTML = html;
+}
+
+function parseProfileSummary(summary) {
+    // Extract name from the beginning
+    const nameMatch = summary.match(/Hi\s+([^,!]+)/i);
+    const name = nameMatch ? nameMatch[1].trim() : 'there';
+    
+    // Parse the summary into structured data
+    const data = {
+        name: name,
+        items: []
+    };
+    
+    // Extract education info
+    const educationMatch = summary.match(/(\d+-year\s+\w+\s+student)/i);
+    if (educationMatch) {
+        data.items.push({ icon: '🎓', text: educationMatch[1] });
+    }
+    
+    // Extract degree and field
+    const degreeMatch = summary.match(/Studying\s+([^•]+?)(?=•|$)/i);
+    if (degreeMatch) {
+        data.items.push({ icon: '📚', text: `Studying ${degreeMatch[1].trim()}` });
+    }
+    
+    // Extract institution type
+    const institutionMatch = summary.match(/At\s+a\s+([^•]+?institution)/i);
+    if (institutionMatch) {
+        data.items.push({ icon: '🏫', text: `At a ${institutionMatch[1].trim()}` });
+    }
+    
+    // Extract background
+    const backgroundMatch = summary.match(/Background:\s+([^•]+?)(?=•|Looking|$)/i);
+    if (backgroundMatch) {
+        data.items.push({ icon: '👤', text: `Background: ${backgroundMatch[1].trim()}` });
+    }
+    
+    // Extract goals
+    const goalsMatch = summary.match(/Looking\s+for:\s+([^,]+)/i);
+    if (goalsMatch) {
+        data.items.push({ icon: '🎯', text: `Looking for: ${goalsMatch[1].trim()}` });
+    }
+    
+    // If no items were parsed, create a fallback
+    if (data.items.length === 0) {
+        // Split by bullet points or periods
+        const sentences = summary.split(/[•.]/).filter(s => s.trim() && !s.toLowerCase().includes('here\'s what'));
+        sentences.slice(0, 5).forEach((sentence, index) => {
+            const icons = ['🎓', '📚', '🏫', '👤', '🎯'];
+            data.items.push({ 
+                icon: icons[index] || '✓', 
+                text: sentence.trim() 
+            });
+        });
+    }
+    
+    return data;
+}
+
+function generateProfileItems(profileData) {
+    return profileData.items.map(item => `
+        <div class="profile-item">
+            <span class="profile-item-icon">${item.icon}</span>
+            <span class="profile-item-text">${item.text}</span>
+        </div>
+    `).join('');
+}
+
+function getMissProbabilityClass(probability) {
+    const p = probability.toLowerCase();
+    if (p.includes('high')) return 'high';
+    if (p.includes('medium')) return 'medium';
+    return 'low';
+}
+
+function getMissProbabilityText(probability) {
+    const p = probability.toLowerCase();
+    if (p.includes('high')) return 'MISS PROBABILITY: HIGH';
+    if (p.includes('medium')) return 'MISS PROBABILITY: MEDIUM';
+    return 'MISS PROBABILITY: LOW';
+}
+
+function extractInsightTitle(insight) {
+    // Return empty string to not show a separate title
+    return '';
+}
+
+function extractInsightBody(insight) {
+    // Clean up the insight text and format as a single paragraph
+    const cleanText = insight
+        .replace(/\n+/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+    return cleanText;
+}
+</script>
+{% endblock %}

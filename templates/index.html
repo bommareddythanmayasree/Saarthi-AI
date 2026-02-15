@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block title %}SaarthiAI - Discover Opportunities You Didn't Know Existed{% endblock %}
+
+{% block content %}
+<div class="welcome-screen">
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <a href="/" class="logo-header">
+                <img src="{{ url_for('static', filename='images/saarthi-logo.png') }}" alt="Saarthi AI Logo" class="logo-image">
+            </a>
+            <nav class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#scholarships">Scholarships</a>
+                <a href="#internships">Internships</a>
+                <a href="/login">Login</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="ai-badge">🎓 AI-Powered Discovery</div>
+        <h1 class="hero-title">
+            Discover Opportunities<br>
+            You <span class="highlight">Didn't Know Existed</span>
+        </h1>
+        <p class="hero-subtitle">
+            Saarthi AI uses advanced matching to find scholarships and internships tailored specifically to your unique profile, skills, and future goals.
+        </p>
+        <div class="hero-buttons">
+            <a href="/login" class="btn btn-primary">Get Started for Free</a>
+            <a href="#features" class="btn btn-secondary">View Demo</a>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <div class="stat-item">
+            <span class="stat-number">50k+</span>
+            <span class="stat-label">Students Helped</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">$12M+</span>
+            <span class="stat-label">Scholarships Found</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">2.5k+</span>
+            <span class="stat-label">Partner Companies</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">Match Accuracy</span>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-section" id="features">
+        <h2 class="features-title">Your AI-Powered Career Guide</h2>
+        <p class="features-subtitle">Everything you need to navigate your academic and professional journey with confidence.</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Scholarship Discovery</h3>
+                <p>Get matched with scholarships that fit your goals and credentials you actually qualify for based on your profile.</p>
+                <a href="#" class="feature-link">Learn more →</a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💼</div>
+                <h3>Internship Matching</h3>
+                <p>Get matched with internships that fit your skills and career aspirations. We focus on opportunities you're likely to miss.</p>
+                <a href="#" class="feature-link">Learn more →</a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h3>Deadline Tracking</h3>
+                <p>Never miss an opportunity again. Set automated reminders and personalized follow-ups for all your applications.</p>
+                <a href="#" class="feature-link">Learn more →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <div class="cta-card">
+            <h2>Ready to find your next opportunity?</h2>
+            <p>Join thousands of students who have accelerated their careers with Saarthi AI. Free to use, forever!</p>
+            <div class="cta-buttons">
+                <a href="/login" class="btn btn-secondary">Sign Up Now</a>
+                <a href="#" class="btn btn-outline">Talk to Sales</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo-icon">S</div>
+                <div class="footer-brand-text">
+                    <h3>Saarthi AI</h3>
+                    <p>Empowering the next generation through intelligent scholarship matching.</p>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Platform</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Scholarships</a></li>
+                    <li><a href="#">Internships</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Stay Updated</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 Saarthi AI. Empowering the next generation of builders.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

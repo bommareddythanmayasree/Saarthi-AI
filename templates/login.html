@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}SaarthiAI - Login{% endblock %}
+
+{% block content %}
+<div class="login-screen">
+    <div class="login-header">
+        <div class="login-logo">
+            <div class="login-logo-icon">🎓</div>
+            <div class="login-logo-text">Saarthi <span class="ai">AI</span></div>
+        </div>
+        <p class="login-tagline">Navigating your future with intelligence</p>
+    </div>
+    
+    <div class="login-container">
+        <div class="login-card">
+            <h1>Welcome back</h1>
+            <p class="login-subtitle">Please enter your details to sign in.</p>
+            
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-with-icon">
+                        <svg class="input-icon" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                        </svg>
+                        <input type="email" id="email" name="email" placeholder="name@company.com" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="label-with-link">
+                        <label for="password">Password</label>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    <div class="input-with-icon">
+                        <svg class="input-icon" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                        </svg>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">
+                    Login →
+                </button>
+                
+                <div class="login-footer">
+                    <p>New to the platform? <a href="/signup" class="signup-link">Create Account</a></p>
+                </div>
+                
+                <div class="privacy-notice">
+                    <svg class="privacy-icon" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
+                    </svg>
+                    <span>YOUR DATA IS USED ONLY FOR PERSONALIZED OPPORTUNITY RECOMMENDATIONS. WE PRIORITIZE YOUR PRIVACY AND SECURITY.</span>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="login-page-footer">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Help Center</a>
+    </div>
+</div>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // For now, just redirect to the form page
+    // In a real app, you would validate credentials here
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    
+    if (email && password) {
+        // Simulate login success and redirect to form
+        window.location.href = '/form';
+    }
+});
+</script>
+{% endblock %}
