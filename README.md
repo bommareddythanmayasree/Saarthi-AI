@@ -84,7 +84,7 @@ The system focuses on **awareness-first discovery**, not just eligibility filter
 ---
 
 ## 🔹 Process Flow
-
+```
 Student Input
       ↓
 Profile Structuring
@@ -98,6 +98,7 @@ Low-Awareness Prioritization
 Explainable Recommendation Generation
       ↓
 Personalized Insight Output
+```
 ---
 
 # 🧩 Core Modules
