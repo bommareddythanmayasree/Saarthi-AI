@@ -72,6 +72,7 @@ The system focuses on **awareness-first discovery**, not just eligibility filter
 
 ## 🔹 High-Level Architecture
 
+|---------------|
 |Student UI (Form Interface)| 
 |Student Profile Structuring Module |
 | Blindspot Detection Engine |
