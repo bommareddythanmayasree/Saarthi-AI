@@ -187,11 +187,11 @@ This transparent approach builds trust and ensures students understand not just 
 
 ## 🚀 Future Enhancements
 
-   *Real-time opportunity ingestion
-   *Automated government portal scraping
-   *Deadline tracking system
-   *Personalized reminders
-   *State-wise recommendation engine
-   *Multi-language support
+   * Real-time opportunity ingestion
+   * Automated government portal scraping
+   * Deadline tracking system
+   * Personalized reminders
+   * State-wise recommendation engine
+   * Multi-language support
 ---
 ## Live Demo Link: https://saarthi-ai-t3y3.onrender.com
