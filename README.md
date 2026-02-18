@@ -74,24 +74,19 @@ The system focuses on **awareness-first discovery**, not just eligibility filter
 
 | Student UI       |
 | (Form Interface) |
-         |
-         v
+|------------------|
 | Student Profile    |
 | Structuring Module |
-         |
-         v
+|--------------------|
 | Blindspot Detection |
 | Engine              |
-         |
-         v
+|---------------------|
 | Opportunity Dataset |
 | (Curated Mock Data) |
-         |
-         v
+|---------------------|
 | Recommendation &     |
 | Explainability Layer |
-         |
-         v
+|----------------------|
 | AI Results Dashboard |
 
 
