@@ -72,39 +72,39 @@ The system focuses on **awareness-first discovery**, not just eligibility filter
 
 ## 🔹 High-Level Architecture
 
-+------------------+
-| Student UI |
+|------------------|
+| Student UI       |
 | (Form Interface) |
-+--------+---------+
-|
-v
-+----------------------+
-| Student Profile |
+|------------------|
+         |
+         v
+|--------------------|
+| Student Profile    |
 | Structuring Module |
-+--------+-------------+
-|
-v
-+----------------------+
+|--------------------|
+         |
+         v
+|---------------------|
 | Blindspot Detection |
-| Engine |
-+--------+-------------+
-|
-v
-+----------------------+
+| Engine              |
+|---------------------|
+         |
+         v
+|---------------------|
 | Opportunity Dataset |
 | (Curated Mock Data) |
-+--------+-------------+
-|
-v
-+----------------------+
-| Recommendation & |
+|---------------------|
+         |
+         v
+|----------------------|   
+| Recommendation &     |
 | Explainability Layer |
-+--------+-------------+
-|
-v
-+----------------------+
+|----------------------|
+         |
+         v
+|----------------------|
 | AI Results Dashboard |
-+----------------------+
+|----------------------|
 
 
 ---
