@@ -104,7 +104,7 @@ Personalized Insight Output
 # 🧩 Core Modules
 ## 1️⃣ Student Profile Generator
 Converts form inputs into structured profile:
-
+```
 {
   "name": "",
   "age": "",
@@ -118,6 +118,7 @@ Converts form inputs into structured profile:
   "missed_before": "",
   "additional_context": ""
 }
+```
 ---
 ## 2️⃣ Blindspot Detection Engine (Core Innovation)
 
