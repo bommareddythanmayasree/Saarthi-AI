@@ -181,7 +181,14 @@ This transparent approach builds trust and ensures students understand not just 
 ---
 
 ## 🎨 MVP Screenshots
+
 <img width="1920" height="2602" alt="SaarthiAI-Discover-Opportunities-You-Didn-t-Know-Existed (1)" src="https://github.com/user-attachments/assets/ba58eac2-a893-43b2-b1c3-64edc03dcf72" />
+<img width="1062" height="1066" alt="SaarthiAI-Login" src="https://github.com/user-attachments/assets/6fbfe335-42ff-4e11-84d5-577c923606b9" />
+<img width="1267" height="3121" alt="untitled (1)" src="https://github.com/user-attachments/assets/db18612e-a85f-4e57-8029-21ec17b5528d" />
+<img width="1483" height="3948" alt="SaarthiAI-Your-Opportunities" src="https://github.com/user-attachments/assets/142e5c5e-6caf-42a5-a606-0227da17873b" />
+
+
+
 
 ---
 
