@@ -1,0 +1,739 @@
+[
+{
+"id": 1,
+"title": "INSPIRE Scholarship for Higher Education (SHE)",
+"category": "Scholarship",
+"organization": "Department of Science & Technology (DST), Government of India",
+"organization_description": "INSPIRE is a flagship DST program that supports meritorious students pursuing careers in science and research.",
+"location": "India",
+"work_mode": "Academic Program",
+"duration": "Entire UG Program",
+"start_date": "Academic Year 2026",
+"application_deadline": "October 2026 (expected)",
+"roles_responsibilities": [
+"Maintain strong academic performance in science subjects",
+"Participate in research or science related academic activities",
+"Submit yearly performance reports if required"
+],
+"skills_required": [
+"Strong foundation in science",
+"Analytical thinking",
+"Research interest"
+],
+"eligibility": {
+"education_level": "UG",
+"eligible_fields": "Science",
+"target_year": "1st"
+},
+"stipend": "₹80,000 per year",
+"perks": [
+"Annual scholarship funding",
+"Research mentorship opportunities",
+"National level recognition"
+],
+"apply_link": "https://online-inspire.gov.in",
+"description": "Scholarship encouraging talented students to pursue careers in natural sciences.",
+"impact_level": "High"
+},
+
+{
+"id": 2,
+"title": "AICTE Pragati Scholarship for Girls",
+"category": "Scholarship",
+"organization": "AICTE",
+"organization_description": "AICTE supports girls pursuing technical education through financial assistance programs.",
+"location": "India",
+"work_mode": "Academic Program",
+"duration": "Entire UG Program",
+"start_date": "Academic Year 2026",
+"application_deadline": "November 2026 (expected)",
+"roles_responsibilities": [
+"Maintain enrollment in AICTE approved institution",
+"Maintain academic performance"
+],
+"skills_required": [
+"Academic commitment",
+"Interest in technical education"
+],
+"eligibility": {
+"education_level": "UG",
+"eligible_fields": "Engineering",
+"target_year": "Any"
+},
+"stipend": "₹50,000 per year",
+"perks": [
+"Tuition support",
+"Financial assistance",
+"Government recognition"
+],
+"apply_link": "https://www.aicte-india.org",
+"description": "Scholarship supporting girls pursuing technical education in India.",
+"impact_level": "High"
+},
+
+{
+"id": 3,
+"title": "DRDO Research Internship",
+"category": "Internship",
+"organization": "Defence Research and Development Organisation",
+"organization_description": "DRDO develops advanced defence technologies for India and provides research exposure to engineering students.",
+"location": "Multiple DRDO Labs, India",
+"work_mode": "On-site",
+"duration": "4 weeks – 6 months",
+"start_date": "Summer / Winter Cycles",
+"application_deadline": "Varies by lab",
+"roles_responsibilities": [
+"Assist scientists in defence research projects",
+"Conduct technical simulations or experiments",
+"Prepare documentation and reports"
+],
+"skills_required": [
+"Python",
+"MATLAB",
+"Embedded Systems",
+"Engineering Fundamentals"
+],
+"eligibility": {
+"education_level": "UG",
+"eligible_fields": "Engineering",
+"target_year": "3rd"
+},
+"stipend": "Varies (some labs unpaid)",
+"perks": [
+"DRDO internship certificate",
+"Exposure to defence research labs",
+"Hands-on R&D experience"
+],
+"apply_link": "https://drdo.gov.in/drdo/scheme-internship-students",
+"description": "Research internship allowing students to work with scientists on defence technologies.",
+"impact_level": "High"
+},
+
+{
+"id": 4,
+"title": "ISRO IIRS Student Internship",
+"category": "Internship",
+"organization": "Indian Space Research Organisation (ISRO)",
+"organization_description": "ISRO provides student internship opportunities through IIRS to expose students to space research and satellite technology.",
+"location": "ISRO / IIRS Centres",
+"work_mode": "On-site",
+"duration": "45 days minimum",
+"start_date": "Multiple cycles each year",
+"application_deadline": "31 March / 31 October",
+"roles_responsibilities": [
+"Work on satellite data analysis",
+"Participate in research projects",
+"Assist scientists in space technology projects"
+],
+"skills_required": [
+"Python",
+"Remote Sensing",
+"GIS",
+"Data Analysis"
+],
+"eligibility": {
+"education_level": "UG",
+"eligible_fields": "Engineering/Science",
+"target_year": "3rd"
+},
+"stipend": "Generally unpaid",
+"perks": [
+"ISRO internship certificate",
+"Exposure to space research",
+"Strong research profile boost"
+],
+"apply_link": "https://www.iirs.gov.in",
+"description": "Internship opportunity to work on space science and remote sensing projects.",
+"impact_level": "High"
+},
+
+{
+"id": 5,
+"title": "RBI Summer Internship Scheme",
+"category": "Internship",
+"organization": "Reserve Bank of India",
+"organization_description": "The central bank of India offers research internships to students interested in economics, banking, and finance.",
+"location": "RBI Offices Across India",
+"work_mode": "On-site",
+"duration": "3 Months",
+"start_date": "April – July",
+"application_deadline": "December (annual cycle)",
+"roles_responsibilities": [
+"Conduct economic or policy research",
+"Assist RBI departments in data analysis",
+"Prepare research reports"
+],
+"skills_required": [
+"Economics",
+"Data analysis",
+"Statistics",
+"Research writing"
+],
+"eligibility": {
+"education_level": "UG/PG",
+"eligible_fields": "Economics/Finance/Commerce",
+"target_year": "Final"
+},
+"stipend": "₹20,000 per month",
+"perks": [
+"RBI internship certificate",
+"Exposure to monetary policy research",
+"Networking with economists"
+],
+"apply_link": "https://opportunities.rbi.org.in",
+"description": "Prestigious research internship program at the Reserve Bank of India.",
+"impact_level": "High"
+},
+
+{
+"id": 6,
+"title": "NPTEL Elite Certification Program",
+"category": "Skill Program",
+"organization": "NPTEL (IITs & IISc)",
+"organization_description": "NPTEL provides high quality online courses and certification programs from IIT professors.",
+"location": "Online",
+"work_mode": "Remote",
+"duration": "8 – 12 Weeks",
+"start_date": "Multiple cycles each year",
+"application_deadline": "Varies by course",
+"roles_responsibilities": [
+"Complete course lectures",
+"Participate in assignments and quizzes",
+"Appear for proctored certification exam"
+],
+"skills_required": [
+"Self learning ability",
+"Technical interest",
+"Discipline"
+],
+"eligibility": {
+"education_level": "UG",
+"eligible_fields": "Any",
+"target_year": "Any"
+},
+"stipend": "No stipend",
+"perks": [
+"IIT certification",
+"Elite/Elite+ certification levels",
+"Industry recognition"
+],
+"apply_link": "https://nptel.ac.in",
+"description": "Online certification programs offered by IIT professors across technical domains.",
+"impact_level": "Medium"
+},
+
+{
+"id": 7,
+"title": "Atal Innovation Mission Student Grant",
+"category": "Government Initiative",
+"organization": "NITI Aayog",
+"organization_description": "Atal Innovation Mission supports student innovators and startups across India.",
+"location": "India",
+"work_mode": "Hybrid",
+"duration": "Project Based",
+"start_date": "Rolling",
+"application_deadline": "Varies",
+"roles_responsibilities": [
+"Develop innovative solutions",
+"Build prototypes",
+"Participate in innovation challenges"
+],
+"skills_required": [
+"Innovation",
+"Problem solving",
+"Entrepreneurship"
+],
+"eligibility": {
+"education_level": "UG",
+"eligible_fields": "Any",
+"target_year": "Any"
+},
+"stipend": "Grant based funding",
+"perks": [
+"Startup mentorship",
+"Funding support",
+"Government innovation recognition"
+],
+"apply_link": "https://aim.gov.in",
+"description": "Innovation grants and mentorship for student entrepreneurs and innovators.",
+"impact_level": "High"
+},
+
+{
+"id": 8,
+"title": "National Apprenticeship Training Scheme (NATS)",
+"category": "Government Initiative",
+"organization": "Ministry of Education, Government of India",
+"organization_description": "NATS provides practical industrial training to graduates and diploma holders.",
+"location": "Across India",
+"work_mode": "On-site",
+"duration": "1 Year",
+"start_date": "Rolling",
+"application_deadline": "Rolling",
+"roles_responsibilities": [
+"Work under industry mentors",
+"Develop practical engineering skills",
+"Complete apprenticeship training"
+],
+"skills_required": [
+"Technical fundamentals",
+"Industry readiness",
+"Professional communication"
+],
+"eligibility": {
+"education_level": "Diploma/UG",
+"eligible_fields": "Engineering",
+"target_year": "Final"
+},
+"stipend": "₹8,000 – ₹12,000 per month",
+"perks": [
+"Government apprenticeship certificate",
+"Industry exposure",
+"Employment opportunities"
+],
+"apply_link": "https://nats.education.gov.in",
+"description": "Government apprenticeship program for engineering graduates and diploma holders.",
+"impact_level": "High"
+},
+
+{
+"id": 9,
+"title": "Google Summer of Code",
+"category": "Internship",
+"organization": "Google",
+"organization_description": "Google Summer of Code is a global program that supports students contributing to open-source software projects.",
+"location": "Remote",
+"work_mode": "Remote",
+"duration": "10–12 Weeks",
+"start_date": "May 2026",
+"application_deadline": "April 2026",
+"roles_responsibilities": [
+"Contribute code to open-source organizations",
+"Collaborate with mentors and developer communities",
+"Complete a project and submit final evaluation"
+],
+"skills_required": [
+"Programming (Python, C++, Java, or similar)",
+"Git and open-source collaboration",
+"Problem solving"
+],
+"eligibility": {
+"education_level": "UG/PG",
+"eligible_fields": "Computer Science / Engineering",
+"target_year": "Any"
+},
+"stipend": "Up to $3000 depending on region",
+"perks": [
+"Mentorship from experienced developers",
+"Global open-source experience",
+"Google recognition"
+],
+"apply_link": "https://summerofcode.withgoogle.com",
+"description": "Prestigious global program where students contribute to open-source projects with mentorship.",
+"impact_level": "High"
+},
+
+{
+"id": 10,
+"title": "Microsoft Learn Student Ambassador Program",
+"category": "Skill Program",
+"organization": "Microsoft",
+"organization_description": "Microsoft Learn Student Ambassadors is a global community of student leaders who promote technology learning in their campuses.",
+"location": "Global",
+"work_mode": "Hybrid",
+"duration": "1 Year Program",
+"start_date": "Rolling",
+"application_deadline": "Rolling",
+"roles_responsibilities": [
+"Organize technical events and workshops",
+"Promote Microsoft technologies",
+"Build technical projects and communities"
+],
+"skills_required": [
+"Leadership",
+"Technical knowledge",
+"Communication skills"
+],
+"eligibility": {
+"education_level": "UG",
+"eligible_fields": "Any",
+"target_year": "Any"
+},
+"stipend": "No stipend",
+"perks": [
+"Microsoft certification vouchers",
+"Global networking",
+"Career mentorship"
+],
+"apply_link": "https://studentambassadors.microsoft.com",
+"description": "Global student program focused on leadership and technical community building.",
+"impact_level": "High"
+},
+
+{
+"id": 11,
+"title": "Meta Open Source Fellowship",
+"category": "Research",
+"organization": "Meta",
+"organization_description": "Meta supports students contributing to open-source technologies through fellowship opportunities.",
+"location": "Remote",
+"work_mode": "Remote",
+"duration": "3 Months",
+"start_date": "Summer Cycle",
+"application_deadline": "Varies",
+"roles_responsibilities": [
+"Work on open-source infrastructure",
+"Collaborate with global developers",
+"Build scalable software systems"
+],
+"skills_required": [
+"Python",
+"Distributed systems",
+"Open source development"
+],
+"eligibility": {
+"education_level": "UG/PG",
+"eligible_fields": "Computer Science",
+"target_year": "Any"
+},
+"stipend": "Varies",
+"perks": [
+"Mentorship from Meta engineers",
+"Open source contributions",
+"Global exposure"
+],
+"apply_link": "https://opensource.fb.com",
+"description": "Fellowship supporting open-source innovation and software development.",
+"impact_level": "High"
+},
+
+{
+"id": 12,
+"title": "Adobe India Internship Program",
+"category": "Internship",
+"organization": "Adobe",
+"organization_description": "Adobe provides internship opportunities to students in engineering, design, and product roles.",
+"location": "Bangalore / Noida / Remote",
+"work_mode": "Hybrid",
+"duration": "6 Months",
+"start_date": "Varies",
+"application_deadline": "Varies",
+"roles_responsibilities": [
+"Develop software features",
+"Collaborate with engineering teams",
+"Work on product development tasks"
+],
+"skills_required": [
+"Data Structures",
+"Java / Python",
+"Software development"
+],
+"eligibility": {
+"education_level": "UG",
+"eligible_fields": "Engineering",
+"target_year": "3rd or 4th"
+},
+"stipend": "₹70,000 – ₹1,00,000 per month",
+"perks": [
+"Industry mentorship",
+"Potential Pre-Placement Offer",
+"Corporate experience"
+],
+"apply_link": "https://careers.adobe.com",
+"description": "Software engineering internship program at Adobe India.",
+"impact_level": "High"
+},
+
+{
+"id": 13,
+"title": "Amazon ML Summer School India",
+"category": "Skill Program",
+"organization": "Amazon",
+"organization_description": "Amazon ML Summer School is a program designed to educate students on machine learning concepts and applications.",
+"location": "Online",
+"work_mode": "Remote",
+"duration": "4 Weeks",
+"start_date": "July 2026",
+"application_deadline": "May 2026",
+"roles_responsibilities": [
+"Attend ML lectures from Amazon scientists",
+"Complete assignments and assessments",
+"Participate in ML workshops"
+],
+"skills_required": [
+"Python",
+"Machine Learning basics",
+"Mathematics"
+],
+"eligibility": {
+"education_level": "UG",
+"eligible_fields": "Engineering",
+"target_year": "2nd or 3rd"
+},
+"stipend": "No stipend",
+"perks": [
+"Amazon ML certification",
+"Exposure to advanced ML concepts",
+"Networking with Amazon scientists"
+],
+"apply_link": "https://www.amazon.science",
+"description": "Machine learning training program conducted by Amazon researchers.",
+"impact_level": "High"
+},
+
+{
+"id": 14,
+"title": "KVPY Fellowship (INSPIRE Integration)",
+"category": "Scholarship",
+"organization": "Department of Science & Technology",
+"organization_description": "The Kishore Vaigyanik Protsahan Yojana encourages students to pursue research careers in science.",
+"location": "India",
+"work_mode": "Academic Program",
+"duration": "UG + PG Support",
+"start_date": "Academic Year Cycle",
+"application_deadline": "Varies",
+"roles_responsibilities": [
+"Maintain academic excellence",
+"Participate in research initiatives"
+],
+"skills_required": [
+"Scientific aptitude",
+"Research interest"
+],
+"eligibility": {
+"education_level": "UG",
+"eligible_fields": "Science",
+"target_year": "1st"
+},
+"stipend": "₹5,000 per month",
+"perks": [
+"Research fellowship",
+"Academic recognition",
+"Support for scientific careers"
+],
+"apply_link": "https://dst.gov.in",
+"description": "Fellowship supporting science students in pursuing research careers.",
+"impact_level": "High"
+},
+
+{
+"id": 15,
+"title": "Smart India Hackathon",
+"category": "Competition",
+"organization": "Ministry of Education, Government of India",
+"organization_description": "Smart India Hackathon is the largest national innovation competition for students.",
+"location": "India",
+"work_mode": "Hybrid",
+"duration": "Hackathon Event",
+"start_date": "Annual Event",
+"application_deadline": "Usually March",
+"roles_responsibilities": [
+"Develop solutions for real-world problems",
+"Collaborate in teams",
+"Present solutions to industry judges"
+],
+"skills_required": [
+"Programming",
+"Innovation",
+"Team collaboration"
+],
+"eligibility": {
+"education_level": "UG",
+"eligible_fields": "Any",
+"target_year": "Any"
+},
+"stipend": "Prize based",
+"perks": [
+"Cash prizes",
+"Government recognition",
+"Startup opportunities"
+],
+"apply_link": "https://sih.gov.in",
+"description": "National level hackathon solving real world problems.",
+"impact_level": "High"
+},
+
+{
+"id": 16,
+"title": "Tata Imagination Challenge",
+"category": "Competition",
+"organization": "Tata Group",
+"organization_description": "A business strategy competition conducted by Tata Group for students across India.",
+"location": "India",
+"work_mode": "Online",
+"duration": "Competition Rounds",
+"start_date": "Annual Cycle",
+"application_deadline": "Usually September",
+"roles_responsibilities": [
+"Solve business case studies",
+"Develop strategic solutions",
+"Present ideas to judges"
+],
+"skills_required": [
+"Business analysis",
+"Strategic thinking",
+"Presentation skills"
+],
+"eligibility": {
+"education_level": "UG/PG",
+"eligible_fields": "Any",
+"target_year": "Any"
+},
+"stipend": "Prize based",
+"perks": [
+"Cash prizes",
+"Internship opportunities",
+"Tata mentorship"
+],
+"apply_link": "https://www.tata.com",
+"description": "Prestigious business case competition by Tata Group.",
+"impact_level": "High"
+},
+
+{
+"id": 17,
+"title": "IIT Bombay Summer Internship Program",
+"category": "Research",
+"organization": "Indian Institute of Technology Bombay",
+"organization_description": "IIT Bombay offers research internships for students interested in advanced technology research.",
+"location": "IIT Bombay",
+"work_mode": "On-site",
+"duration": "2 Months",
+"start_date": "May 2026",
+"application_deadline": "February 2026",
+"roles_responsibilities": [
+"Assist professors in research labs",
+"Work on technical research problems",
+"Prepare project reports"
+],
+"skills_required": [
+"Programming",
+"Research skills",
+"Technical fundamentals"
+],
+"eligibility": {
+"education_level": "UG",
+"eligible_fields": "Engineering",
+"target_year": "2nd or 3rd"
+},
+"stipend": "₹10,000 per month",
+"perks": [
+"IIT research exposure",
+"Recommendation letters",
+"Academic networking"
+],
+"apply_link": "https://www.iitb.ac.in",
+"description": "Summer research internship at IIT Bombay labs.",
+"impact_level": "High"
+},
+
+{
+"id": 18,
+"title": "Google Women Techmakers Scholarship",
+"category": "Scholarship",
+"organization": "Google",
+"organization_description": "Google supports women in technology through scholarships and mentorship programs.",
+"location": "Global",
+"work_mode": "Academic Support",
+"duration": "Academic Year",
+"start_date": "Annual Cycle",
+"application_deadline": "Varies",
+"roles_responsibilities": [
+"Maintain academic progress",
+"Participate in mentorship events"
+],
+"skills_required": [
+"Programming",
+"Technical interest",
+"Academic performance"
+],
+"eligibility": {
+"education_level": "UG",
+"eligible_fields": "Computer Science",
+"target_year": "Any"
+},
+"stipend": "$1,000 – $10,000",
+"perks": [
+"Financial support",
+"Mentorship",
+"Google networking opportunities"
+],
+"apply_link": "https://buildyourfuture.withgoogle.com",
+"description": "Scholarship program encouraging women to pursue careers in technology.",
+"impact_level": "High"
+},
+
+{
+"id": 19,
+"title": "GitHub Campus Expert Program",
+"category": "Skill Program",
+"organization": "GitHub",
+"organization_description": "GitHub Campus Experts are student leaders who build technical communities on campus.",
+"location": "Global",
+"work_mode": "Remote",
+"duration": "Ongoing",
+"start_date": "Rolling",
+"application_deadline": "Rolling",
+"roles_responsibilities": [
+"Build developer communities",
+"Organize coding events",
+"Promote open source collaboration"
+],
+"skills_required": [
+"Git",
+"Open source contribution",
+"Leadership"
+],
+"eligibility": {
+"education_level": "UG",
+"eligible_fields": "Any",
+"target_year": "Any"
+},
+"stipend": "No stipend",
+"perks": [
+"GitHub swag",
+"Community leadership training",
+"Global developer network"
+],
+"apply_link": "https://education.github.com/experts",
+"description": "Program supporting student leaders in developer communities.",
+"impact_level": "Medium"
+},
+
+{
+"id": 20,
+"title": "Startup India Seed Fund Scheme",
+"category": "Government Initiative",
+"organization": "Startup India",
+"organization_description": "Startup India provides seed funding and mentorship support for innovative startups.",
+"location": "India",
+"work_mode": "Hybrid",
+"duration": "Startup Funding Program",
+"start_date": "Rolling",
+"application_deadline": "Rolling",
+"roles_responsibilities": [
+"Develop startup prototype",
+"Pitch to incubators",
+"Build scalable business model"
+],
+"skills_required": [
+"Entrepreneurship",
+"Innovation",
+"Business planning"
+],
+"eligibility": {
+"education_level": "UG/PG",
+"eligible_fields": "Any",
+"target_year": "Any"
+},
+"stipend": "Up to ₹50 Lakhs grant",
+"perks": [
+"Startup funding",
+"Mentorship",
+"Government incubation support"
+],
+"apply_link": "https://www.startupindia.gov.in",
+"description": "Government program supporting early stage startups with funding.",
+"impact_level": "High"
+}
+]
