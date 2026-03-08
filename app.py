@@ -1,15 +1,7 @@
 """
 Production-ready Flask web application for SaarthiAI.
-
-This module provides a web interface for the SaarthiAI opportunity discovery system.
-Includes CORS support, logging, and production configurations.
 """
 from flask import Flask, render_template, request, jsonify, session
-from flask_cors import CORS
-import secrets
-import logging
-from datetime import datetime
-
 from saarthi_ai.application_controller import ApplicationController
 from saarthi_ai.json_matcher import JSONOpportunityMatcher
 from saarthi_ai.models import (
@@ -20,20 +12,10 @@ from saarthi_ai.models import (
     OpportunityGoal,
     MissedOpportunityFrequency,
 )
+import secrets
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
-
-# Initialize Flask app
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(32)
-
-# Enable CORS for API endpoints
-CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # Initialize controller and JSON matcher
 controller = ApplicationController()
@@ -43,28 +25,24 @@ json_matcher = JSONOpportunityMatcher()
 @app.route('/')
 def index():
     """Home page with welcome screen."""
-    logger.info("Landing page accessed")
     return render_template('index.html')
 
 
 @app.route('/login')
 def login():
     """Login page."""
-    logger.info("Login page accessed")
     return render_template('login.html')
 
 
 @app.route('/signup')
 def signup():
     """Signup page."""
-    logger.info("Signup page accessed")
     return render_template('signup.html')
 
 
 @app.route('/form')
 def form():
     """Student information form page."""
-    logger.info("Student form page accessed")
     return render_template('form.html')
 
 
@@ -73,7 +51,6 @@ def submit_form():
     """Handle form submission and return results."""
     try:
         data = request.json
-        logger.info(f"Form submission received for student: {data.get('name', 'Unknown')}")
         
         # Parse skills from array or comma-separated string
         skills = data.get('skills', [])
@@ -88,7 +65,6 @@ def submit_form():
             try:
                 background_indicators.append(BackgroundIndicator(bg))
             except ValueError:
-                logger.warning(f"Invalid background indicator: {bg}")
                 pass
         
         # Parse opportunity goals
@@ -97,16 +73,7 @@ def submit_form():
             try:
                 opportunity_goals.append(OpportunityGoal(goal))
             except ValueError:
-                logger.warning(f"Invalid opportunity goal: {goal}")
                 pass
-        
-        # Validate that at least one goal was parsed
-        if not opportunity_goals:
-            logger.error("No valid opportunity goals provided")
-            return jsonify({
-                'success': False,
-                'error': 'At least one valid opportunity goal is required'
-            }), 400
         
         # Create student profile
         profile = StudentProfile(
@@ -127,14 +94,11 @@ def submit_form():
             additional_context=data.get('additional_context', '').strip() or None,
         )
         
-        logger.info(f"Profile created: {profile.name}, {profile.education_level.value}, {len(opportunity_goals)} goals")
-        
         # Process the profile with original controller for blindspots
         result = controller.handle_form_submission(profile)
         
         # Format the response
         if not result['valid']:
-            logger.warning(f"Profile validation failed: {result.get('error')}")
             return jsonify({
                 'success': False,
                 'error': result.get('error'),
@@ -144,7 +108,7 @@ def submit_form():
         
         # Prepare student data for JSON matcher
         student_data = {
-            'gender': profile.gender,
+            'gender': profile.gender,  # Pass gender directly
             'education_level': profile.education_level.value,
             'field': _normalize_field_of_study(profile.field_of_study),
             'year': _convert_year_to_string(profile.year_of_study),
@@ -152,12 +116,11 @@ def submit_form():
             'skills': profile.skills,
             'institution_type': profile.institution_type.value,
             'background': _get_primary_background(background_indicators, profile.gender),
-            'goals': [goal.value for goal in opportunity_goals]
+            'goals': [goal.value for goal in opportunity_goals]  # Pass goals as list of strings
         }
         
         # Match opportunities using JSON matcher
         matched_opportunities = json_matcher.match_opportunities(student_data)
-        logger.info(f"Found {len(matched_opportunities)} matching opportunities")
         
         # Format blindspots
         blindspots_data = [
@@ -199,7 +162,6 @@ def submit_form():
                 for opp in matched_opportunities
             ]
             
-            logger.info(f"Successfully processed submission for {profile.name}")
             return jsonify({
                 'success': True,
                 'profile_summary': result['profile_summary'],
@@ -210,7 +172,6 @@ def submit_form():
             })
         else:
             # No matches found
-            logger.info(f"No matches found for {profile.name}")
             return jsonify({
                 'success': True,
                 'profile_summary': result['profile_summary'],
@@ -221,7 +182,6 @@ def submit_form():
             })
         
     except Exception as e:
-        logger.error(f"Error processing form submission: {str(e)}", exc_info=True)
         return jsonify({
             'success': False,
             'error': f'An error occurred: {str(e)}'
@@ -315,53 +275,14 @@ def _get_primary_background(background_indicators: list, gender: str = None) -> 
 @app.route('/results')
 def results():
     """Results page showing all insights."""
-    logger.info("Results page accessed")
     return render_template('results.html')
 
 
 @app.route('/test-google-auth')
 def test_google_auth():
     """Google Sign-In diagnostic page."""
-    logger.info("Google auth test page accessed")
     return render_template('test-google-auth.html')
 
 
-@app.route('/health')
-def health_check():
-    """Health check endpoint for monitoring."""
-    return jsonify({
-        'status': 'healthy',
-        'timestamp': datetime.utcnow().isoformat(),
-        'service': 'SaarthiAI'
-    })
-
-
-@app.errorhandler(404)
-def not_found(error):
-    """Handle 404 errors."""
-    logger.warning(f"404 error: {request.url}")
-    return render_template('index.html'), 404
-
-
-@app.errorhandler(500)
-def internal_error(error):
-    """Handle 500 errors."""
-    logger.error(f"500 error: {str(error)}", exc_info=True)
-    return jsonify({
-        'success': False,
-        'error': 'An internal server error occurred'
-    }), 500
-
-
 if __name__ == '__main__':
-    # Production configuration
-    import os
-    
-    # Get configuration from environment variables
-    debug_mode = os.getenv('FLASK_DEBUG', 'False').lower() == 'true'
-    host = os.getenv('FLASK_HOST', '0.0.0.0')
-    port = int(os.getenv('FLASK_PORT', 5000))
-    
-    logger.info(f"Starting SaarthiAI web application on {host}:{port} (debug={debug_mode})")
-    
-    app.run(debug=debug_mode, host=host, port=port)
+    app.run(debug=True, host='0.0.0.0', port=5000)

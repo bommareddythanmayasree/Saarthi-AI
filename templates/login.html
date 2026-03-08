@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+
+{% block title %}SaarthiAI - Login{% endblock %}
+
+{% block content %}
+<div class="login-screen">
+    <div class="login-header">
+        <div class="login-logo">
+            <img src="{{ url_for('static', filename='images/saarthi-logo.png') }}" alt="Saarthi AI Logo" class="login-logo-image">
+        </div>
+        <p class="login-tagline">Navigating your future with intelligence</p>
+    </div>
+    
+    <div class="login-container">
+        <div class="login-card">
+            <h1>Welcome back</h1>
+            <p class="login-subtitle">Please enter your details to sign in.</p>
+            
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-with-icon">
+                        <svg class="input-icon" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                        </svg>
+                        <input type="email" id="email" name="email" placeholder="name@company.com" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="label-with-link">
+                        <label for="password">Password</label>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    <div class="input-with-icon">
+                        <svg class="input-icon" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                        </svg>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">
+                    Login →
+                </button>
+                
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+                
+                <button type="button" id="googleSignInBtn" class="btn btn-google btn-full">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.64 9.20454C17.64 8.56636 17.5827 7.95272 17.4764 7.36363H9V10.845H13.8436C13.635 11.97 13.0009 12.9231 12.0477 13.5613V15.8195H14.9564C16.6582 14.2527 17.64 11.9454 17.64 9.20454Z" fill="#4285F4"/>
+                        <path d="M9 18C11.43 18 13.4673 17.1941 14.9564 15.8195L12.0477 13.5613C11.2418 14.1013 10.2109 14.4204 9 14.4204C6.65591 14.4204 4.67182 12.8372 3.96409 10.71H0.957275V13.0418C2.43818 15.9831 5.48182 18 9 18Z" fill="#34A853"/>
+                        <path d="M3.96409 10.71C3.78409 10.17 3.68182 9.59318 3.68182 9C3.68182 8.40682 3.78409 7.83 3.96409 7.29V4.95818H0.957275C0.347727 6.17318 0 7.54772 0 9C0 10.4523 0.347727 11.8268 0.957275 13.0418L3.96409 10.71Z" fill="#FBBC05"/>
+                        <path d="M9 3.57955C10.3214 3.57955 11.5077 4.03364 12.4405 4.92545L15.0218 2.34409C13.4632 0.891818 11.4259 0 9 0C5.48182 0 2.43818 2.01682 0.957275 4.95818L3.96409 7.29C4.67182 5.16273 6.65591 3.57955 9 3.57955Z" fill="#EA4335"/>
+                    </svg>
+                    Sign in with Google
+                </button>
+                
+                <div class="login-footer">
+                    <p>New to the platform? <a href="/signup" class="signup-link">Create Account</a></p>
+                </div>
+                
+                <div class="privacy-notice">
+                    <svg class="privacy-icon" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
+                    </svg>
+                    <span>YOUR DATA IS USED ONLY FOR PERSONALIZED OPPORTUNITY RECOMMENDATIONS. WE PRIORITIZE YOUR PRIVACY AND SECURITY.</span>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="login-page-footer">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Help Center</a>
+    </div>
+</div>
+
+<script type="module">
+import { login, signInWithGoogle, checkAuthState } from '{{ url_for("static", filename="js/firebase-auth.js") }}';
+
+// Check if user is already logged in
+checkAuthState((user) => {
+    if (user) {
+        // User is already logged in, redirect to form
+        window.location.href = '/form';
+    }
+});
+
+// Handle login form submission
+document.getElementById('loginForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const submitBtn = this.querySelector('button[type="submit"]');
+    
+    // Disable button and show loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Logging in...';
+    
+    // Clear any previous error messages
+    const existingError = document.querySelector('.error-message');
+    if (existingError) {
+        existingError.remove();
+    }
+    
+    // Attempt login
+    const result = await login(email, password);
+    
+    if (result.success) {
+        // Login successful, redirect to form page
+        window.location.href = '/form';
+    } else {
+        // Login failed, show error message
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Login →';
+        
+        // Display error message
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message';
+        errorDiv.style.cssText = 'color: #ef4444; background: #fee; padding: 12px; border-radius: 8px; margin-top: 16px; font-size: 14px;';
+        errorDiv.textContent = result.error;
+        
+        const form = document.getElementById('loginForm');
+        form.insertBefore(errorDiv, form.querySelector('.login-footer'));
+    }
+});
+
+// Handle Google Sign-In
+document.getElementById('googleSignInBtn').addEventListener('click', async function() {
+    const btn = this;
+    const originalText = btn.innerHTML;
+    
+    // Disable button and show loading state
+    btn.disabled = true;
+    btn.innerHTML = '<span style="margin: 0 auto;">Signing in...</span>';
+    
+    // Clear any previous error messages
+    const existingError = document.querySelector('.error-message');
+    if (existingError) {
+        existingError.remove();
+    }
+    
+    // Attempt Google sign-in
+    const result = await signInWithGoogle();
+    
+    if (result.success) {
+        // Login successful, redirect to form page
+        window.location.href = '/form';
+    } else {
+        // Login failed, show error message
+        btn.disabled = false;
+        btn.innerHTML = originalText;
+        
+        // Display error message
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message';
+        errorDiv.style.cssText = 'color: #ef4444; background: #fee; padding: 12px; border-radius: 8px; margin-top: 16px; font-size: 14px;';
+        errorDiv.textContent = result.error;
+        
+        const form = document.getElementById('loginForm');
+        form.insertBefore(errorDiv, form.querySelector('.login-footer'));
+    }
+});
+</script>
+{% endblock %}
